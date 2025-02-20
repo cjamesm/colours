@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Colour Box</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        img {
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+    <img id="colourBox" src="output/colour_box.png" alt="Colour Box" width="200" height="200">
+    <script>
+        setInterval(() => {
+            const img = document.getElementById('colourBox');
+            img.src = 'output/colour_box.png?timestamp=' + new Date().getTime();
+        }, 1000);
+    </script>
+</body>
+</html>
